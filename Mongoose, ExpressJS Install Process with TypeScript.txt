@@ -1,0 +1,16 @@
+============Mongoose, ExpressJS Install Process with TypeScript================
+
+1. At first, create a folder in any drive or by a terminal
+2. create file name ".gitignore" in the file write : node_modules. This means this project ignore "node_modules" data
+3. in terminal write : npm init -y ( A json file created which name is "package.json")
+4. npm i -D typescript ( -D means developer dependency. it is not use production project directly. it is use for developer practice purpose only. Another reason is: practically, typescript data is not run in project directly. converting the typescript data to javascript then we can use it in directly any project.). After put this syntex in terminal we get a file which name is "package-lock.json"
+5. npm i -D @types/express (this npm package install for typescript data type)
+6. npm i express (terminal write it. it is add in "package.json" and "package-lock.json" file as a dependency package. it is directly used in production project. Additionally, a lot of data added in "package-lock.json" file)
+7. Create two folder. one name is "src" and another name is "dist". The "src" file keep typescript file("rootDir" : "./src") and "dist" file keep javascript file("outDir" : "./dist").
+8. Go to "tsconfig.json" file and find out "rootDir" word and comment out then write: ("rootDir" : "./src") and find out "outDir" word and comment out then write: ("outDir" : "./dist")
+9. create two file in "src" folder. one name is "app.ts" which is have all application data in here and another is "server.ts" which is have server related data for run.
+10. typescript project watch write : tsc -w
+11. Go to "package.json" file and in the "Scripts" section write : "dev": "ts-node-dev --respawn --transpile-only src/server.ts", "build":"tsc", "start": "node dist/server.js",
+12. npm i mongoose
+13. npm i -D ts-node-dev (this package install for two main works. converting typescript data to javascript and run the project in browser automatically)
+14. 
